@@ -6,17 +6,17 @@ body {
 
 .banner-content {
     display: flex;
-    background: url("../images/banner.png"), linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6));
+    background: url('../images/banner.png'), linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6));
     flex-direction: column;
     align-items: center;
     color: #ffffff;
     
     .logo {
+        display: flex;
         width: 268px;
         aspect-ratio: 1/1;
         background-color: rgba(0,0,0,.2);
         border-radius: 50%;
-        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -131,7 +131,7 @@ body {
 #transform-world {
   height: 560px;
   background-size: cover;
-  background-image: url("../images/woman-code.png");
+  background-image: url("/assets/images/woman-code.png");
   background-attachment: fixed;
   padding: 200px;
 
