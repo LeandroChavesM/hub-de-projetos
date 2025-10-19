@@ -36,6 +36,10 @@ main {
   height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;

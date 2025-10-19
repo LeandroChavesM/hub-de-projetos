@@ -28,6 +28,12 @@ const projetos = [
     description: "Um audiobook de Dom Casmurro",
     tag: ["Javascript"],
   },
+  {
+    name: "Clone Spotify",
+    folder: "projects/spotify-imersao-alura",
+    description: "Um clone do spotify",
+    tag: ["React", "CSS", "Javascript"],
+  },
 ];
 
 let itemAtivo = null;
@@ -92,6 +98,10 @@ openBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open-sidebar");
 });
 
+if (itemAtivo === null) {
+  closeBtn.classList.add("hidden");
+}
+
 // Evento para fechar a sidebar e limpar o iframe
 closeBtn.addEventListener("click", () => {
   document.querySelectorAll(".side-item").forEach((item) => {
@@ -100,6 +110,7 @@ closeBtn.addEventListener("click", () => {
   projectIframe.src = "";
 
   title.innerText = "";
+  closeBtn.classList.add("hidden");
 });
 
 // Evento de clique na sidebar com delegação
@@ -121,6 +132,7 @@ sideItems.addEventListener("click", (e) => {
   title.innerText = itemAtivo;
 
   projectIframe.src = link.href;
+  closeBtn.classList.remove("hidden");
 });
 
 // Evento de busca dinâmica
