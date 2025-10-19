@@ -1,0 +1,23 @@
+{
+  "name": "hub-de-projetos",
+  "version": "1.0.0",
+  "description": "Repositório que servirá de hub para projetos menores de estudo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "css:watch": "sass --watch src:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroChavesM/projetos-de-estudo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LeandroChavesM/projetos-de-estudo/issues"
+  },
+  "homepage": "https://github.com/LeandroChavesM/projetos-de-estudo#readme"
+}

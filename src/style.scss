@@ -1,0 +1,260 @@
+@import url(./reset.css);
+
+:root{
+  --cor-principal: #e3e9f7;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cor-principal);
+  display: flex;
+  overflow-y: hidden;
+  background-color: #f5deb3ad;
+  background-image: repeating-linear-gradient(
+    45deg,              /* Ângulo da diagonal */
+    #c2e7e5,            /* Cor da linha tracejada */
+    #c2e7e5 1px,        /* Espessura da linha */
+    transparent 1px,    /* Espaço entre as linhas */
+    transparent 8px    /* Distância total entre repetições */
+  ),
+  repeating-linear-gradient(
+    135deg,              /* Ângulo da diagonal */
+    #c2e7e5,            /* Cor da linha tracejada */
+    #c2e7e5 1px,        /* Espessura da linha */
+    transparent 1px,    /* Espaço entre as linhas */
+    transparent 8px    /* Distância total entre repetições */
+  );
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  transition: width 1s;
+  margin-left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  height: 100vh;
+  border-radius: 0 18px 18px 0;
+  position: absolute;
+  transition: all 1.5s;
+  width: 0;
+  transform: translateX(-100%);
+  background-image: repeating-linear-gradient(
+    45deg,              /* Ângulo da diagonal */
+    #c2e7e5,            /* Cor da linha tracejada */
+    #c2e7e5 1px,        /* Espessura da linha */
+    transparent 1px,    /* Espaço entre as linhas */
+    transparent 8px    /* Distância total entre repetições */
+  ),
+  repeating-linear-gradient(
+    135deg,              /* Ângulo da diagonal */
+    #c2e7e5,            /* Cor da linha tracejada */
+    #c2e7e5 1px,        /* Espessura da linha */
+    transparent 1px,    /* Espaço entre as linhas */
+    transparent 8px    /* Distância total entre repetições */
+  );
+}
+
+#sidebar_content {
+  padding: 12px;
+}
+
+#side_items {
+  display: none;
+}
+
+#search-bar{
+  display: none;
+}
+
+#tagSelector {
+  display: none;
+}
+
+.side-item {
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f5deb3;
+  border: 1px solid #ccc !important;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+  }
+}
+
+.side-item.active {
+  background-color: #4f46e5;
+
+  a {
+    color: var(--cor-principal);
+  }
+}
+
+.side-item:hover:not(.active) {
+  background-color: var(--cor-principal);
+}
+
+#open_btn {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  background-color: #4f46e5;
+  border-radius: 100%;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+#open_btn_icon {
+  font-size: 18px;
+  transition: transform 1s ease;
+}
+
+.open-sidebar #open_btn_icon {
+  transform: rotate(180deg);
+}
+
+.item-description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  transition: width 0.3s;
+  flex-grow: 1;
+}
+
+#sidebar.open-sidebar {
+  width: 320px;
+  min-width: 320px;
+  overflow: visible;
+  transition: all 1s;
+  transform: translateX(0);
+}
+
+#sidebar.open-sidebar .item-description {
+  width: 150px;
+}
+
+#sidebar.open-sidebar .side-item a {
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+#sidebar.open-sidebar #side_items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+#sidebar.open-sidebar #open_btn {
+  right: -20px;
+}
+
+#sidebar.open-sidebar #tagSelector {
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 14px;
+  background-color: #f5deb3;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Alinha o texto verticalmente */
+}
+
+#sidebar.open-sidebar #search-bar {
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px; /* Ajusta padding para melhor proporção */
+  font-size: 14px;
+  background-color: #f5deb3;
+  box-sizing: border-box; /* Garante que padding não aumente a largura total */
+  display: flex;
+  align-items: center; /* Alinha o texto e o ícone verticalmente */
+}
+
+
+#main-content{
+  display: flex;
+  flex-direction: column;
+  background-color: #f5deb3;
+  width: 90vw;
+}
+
+#main-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+#close_btn{
+  position: relative;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #fff;
+  color: #bbb;
+
+  &:hover{
+    color: #ccc;
+  }
+  
+  &:before{
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: width 0.5s ease;
+    background-color: #f5deb3;
+    z-index: -1;
+  }
+
+  &:hover::before{
+    width: 100%;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 90vh;
+}
+
+.projetos{
+  padding: 14px;
+}
+
+#search-options {
+  position: relative;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 12px; /* Aumenta o espaço entre os elementos */
+  margin: 15px 0 30px 0;
+  width: 90%;
+}
+
+#search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
