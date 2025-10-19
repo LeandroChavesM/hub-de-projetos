@@ -32,7 +32,7 @@ const projetos = [
     name: "Clone Spotify",
     folder: "projects/spotify-imersao-alura",
     description: "Um clone do spotify",
-    tag: ["React", "CSS", "Javascript"],
+    tag: ["CSS", "Javascript"],
   },
 ];
 
