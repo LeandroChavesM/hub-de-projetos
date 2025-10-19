@@ -1,48 +1,48 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: url("../images/wall.png");
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url("../images/wall.png");
 }
 
 .menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    background: #000;
-    color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  background: #000;
+  color: #fff;
 }
 
 .panel {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.square{
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
-    background: #f5deb3;
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  background: #f5deb3;
 }
 
-.enemy{
-    background: url("../images/ralph.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #f5deb3;
+.enemy {
+  background: url("../images/ralph.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5deb3;
 }
 
-.menu-lives{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu-lives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-time h2:nth-child(2),
-.menu-score h2:nth-child(2){
-    margin-top: 1rem;
+.menu-score h2:nth-child(2) {
+  margin-top: 1rem;
 }
