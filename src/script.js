@@ -23,6 +23,12 @@ const projetos = [
     tag: ["Javascript"],
   },
   {
+    name: "Jogo da Memória",
+    folder: "projects/memory-game",
+    description: "Jogo simples com js",
+    tag: ["Javascript"],
+  },
+  {
     name: "Audiobook",
     folder: "projects/audiobook",
     description: "Um audiobook de Dom Casmurro",
